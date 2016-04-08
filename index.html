@@ -17,13 +17,13 @@
     <div class="container">
         <div class="card" id="card1">  <!-- Requires ID -->
             <div class="product">
-                <input type="text" placeholder="Enter Product Code" name="1"> <!-- Requires NAME -->
+                <input type="text" onkeyup="showPrice(this.value);" placeholder="Enter Product Code" name="1"> <!-- Requires NAME -->
             </div>
             <div class="remove" onclick="rem_product('1')";>
                 <a href="#"><span><i class="ion ion-close-round"></i></span></a>
             </div>
             <div class="pname"></div>
-            <div class="price"></div>
+            <div class="price" id="pr"></div>
         </div>
         <div class="add" onclick="add_product();" id="add_btn">
             <a href="#"><span><i class="ion ion-plus"></i></span></a>
