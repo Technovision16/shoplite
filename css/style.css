@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    color: #555;
+    background: #fafaff;
+}
+.navbar	{
+	background: #555299;
+	height: 20vh;
+	position: relative;
+}
+.navbar a {
+	text-decoration: none;
+	color: #d9d9d9;
+	transition:.6s;
+}
+.navbar a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+.link {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.container {
+	padding: 20px 30px;
+	box-sizing: border-box;
+}
+.card {
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	min-height: 150px; 
+	box-shadow: 2px 4px 16px 2px rgba(0,0,0,0.3);
+	margin: 30px 5px ;
+	padding: 20px;
+	border-bottom: 5px solid #D12F2F;
+}
+.product input {
+	border: 2px solid;
+	border-radius: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+
+
+.buttons button {
+	width: 30%;
+	height: 35px;
+	border-radius: 0;
+	border :2px solid #fafafa;
+	color: #f4f4f4;
+	transition: 0.3s;
+	/*line-height: 5em;*/
+	box-sizing:border-box;
+
+}
+
+
+.add {
+  border-radius: 50%;
+  background: #ec407a;
+  box-sizing:border-box;
+  margin-top: 20px;
+  margin-left: 20px;
+  transition: .5s;
+  height: 60px;
+  width: 60px;
+}
+.add a{
+  padding: 11px 19px;
+  color: #fff;
+  font-size: 2em;
+  display: block;
+}
+.add:hover {
+  background-color: #e91e63;
+  box-shadow: 7px 8px 16px 0px rgba(0, 0, 0, 0.1);
+}
+.add:focus {
+  background-color: #e91e63;
+}
+
+
+
+.remove {
+  border-radius: 50%;
+  background: #f44336;
+  box-sizing:border-box;
+  margin-top: 20px;
+  transition: .5s;
+  height: 60px;
+  width: 60px;
+}
+.remove a{
+  padding: 11px 19px;
+  color: #fff;
+  font-size: 2em;
+  display: block;
+}
+.remove:hover {
+  background-color: #e53935;
+  box-shadow: 7px 8px 16px 0px rgba(0, 0, 0, 0.1);
+}
+.remove:focus {
+  background-color: #e53935;
+}
+.product {
+	display: inline-block !important;
+}
+
+
+
+
+#choose-btn {
+	background: #1ABC9C;
+}
+#apply-btn {
+	background: #2c3e50;
+}
+button:hover {
+	background: #9b59b6 !important;
+	
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+	.product input {
+		font-size: 10px;
+	}
+	.card {
+		min-height: 100px;
+	}
+	.add {
+		height: 30px;
+		width: 30px;
+	}
+	.remove {
+		height: 30px;
+		width: 30px;
+	}
+	.add a,.remove a {
+		padding: 4px 10px;
+		font-size: 1em;
+	}
+	
+}

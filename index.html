@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Z'16 | Get Zeal</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+    <div class="navbar"></div>
+    <div class="container">
+        <div class="card" id="card1">  <!-- Requires ID -->
+            <div class="product">
+                <input type="text" placeholder="Enter Product Code" name="1"> <!-- Requires NAME -->
+            </div>
+            <div class="pname"></div>
+            <div class="price"></div>
+            <div class="remove" onclick="rem_product()";>
+                <a href="#"><span><i class="ion ion-close-round"></i></span></a>
+            </div>
+        </div>
+        <div class="add" onclick="add_product();" id="add_btn">
+            <a href="#"><span><i class="ion ion-plus"></i></span></a>
+        </div>
+        <div class="card" id="total">
+            <h2>Your Total Bill :</h2>
+        </div>
+    </div>
+</body>
+</html>
