@@ -10,3 +10,7 @@ function add_product() {
 	console.log(document.getElementsByClassName('card')[count-1].attributes);
 	// console.log(count);
 }
+function send_count() {
+	var a=document.getElementById('counter').value=count;
+	console.log(a);
+}

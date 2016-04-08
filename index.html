@@ -19,11 +19,11 @@
             <div class="product">
                 <input type="text" placeholder="Enter Product Code" name="1"> <!-- Requires NAME -->
             </div>
-            <div class="pname"></div>
-            <div class="price"></div>
-            <div class="remove" onclick="rem_product()";>
+            <div class="remove" onclick="rem_product('1')";>
                 <a href="#"><span><i class="ion ion-close-round"></i></span></a>
             </div>
+            <div class="pname"></div>
+            <div class="price"></div>
         </div>
         <div class="add" onclick="add_product();" id="add_btn">
             <a href="#"><span><i class="ion ion-plus"></i></span></a>
@@ -31,6 +31,10 @@
         <div class="card" id="total">
             <h2>Your Total Bill :</h2>
         </div>
+        <form action="">
+            <input type="hidden" id="counter">
+            <input type="submit" id="submit_btn" value="Add to Cart" name="submit" onclick="send_count();">
+        </form>
     </div>
 </body>
 </html>
