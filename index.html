@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +18,17 @@
 
 </head>
 <body>
-    <div class="navbar"></div>
+ <!--    <div class="modal" id="#myModal">
+        <div class="inner">
+            <h2>Do you want to confirm the order</h2>
+            <p><strong>Note : </strong>The order will be non-cancellable after this step.</p>
+            <button>Submit</button>
+        </div>
+
+    </div>  -->
+    <div class="navbar">
+        <a href="">ShopLite </a>
+    </div>
     <div class="container">
         <div class="card" id="card1">  <!-- Requires ID -->
             <div class="product">
@@ -23,17 +38,18 @@
                 <a href="#"><span><i class="ion ion-close-round"></i></span></a>
             </div>
             <div class="pname"></div>
-            <div class="price" id="pr"></div>
+            <div class="price" id="pr1"></div>
         </div>
         <div class="add" onclick="add_product();" id="add_btn">
             <a href="#"><span><i class="ion ion-plus"></i></span></a>
         </div>
         <div class="card" id="total">
             <h2>Your Total Bill :</h2>
+            <h2 id="tot"></h2>
         </div>
         <form action="">
             <input type="hidden" id="counter">
-            <input type="submit" id="submit_btn" value="Add to Cart" name="submit" onclick="send_count();">
+            <input type="submit" id="submit_btn" value="Add to Cart" name="submit" onclick="send_count();showModal();">
         </form>
     </div>
 </body>
