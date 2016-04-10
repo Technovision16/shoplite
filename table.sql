@@ -19,3 +19,10 @@ CREATE TABLE IF NOT EXISTS shop (
 	p_code varchar(255) not null,
 	price int not null
 ) ENGINE=INNODB;
+
+
+CREATE TABLE IF NOT EXISTS shop_reg (
+	id int primary key not null,
+	name varchar(255) not null,
+	shop_id int not null,
+) ENGINE=INNODB;

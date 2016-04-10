@@ -13,13 +13,12 @@ if(isset($_SESSION['start']))
     p_code varchar(255) not null,
     price int not null
     ) ENGINE=INNODB;";
-$qq="Hello";
     
     if($bd->query($query));
     
 
         // Array with names
-        $a =array("101"=>75, "102"=>95, "103"=>177, "104"=>45,"105"=>55, "106"=>30, "107"=>51, "108"=>49, "109"=>57, "110"=>84, "111"=>91, "112"=>222, "113"=>589, "114"=>999, "115"=>199, "116"=>201, "117"=>11);
+        $a =array("101ADI"=>75, "102REE"=>95, "103PEN"=>177, "104ADI"=>45,"105PEN"=>55, "106REE"=>30, "107ADI"=>51, "108ADI"=>49, "109REE"=>57, "110REE"=>84, "111PEN"=>91, "112REE"=>222, "113ADI"=>589, "114PEN"=>999, "115ADI"=>199, "116REE"=>201, "117ADI"=>11);
 
         // get the q parameter from URL
         $q = $_REQUEST["q"];
@@ -41,7 +40,7 @@ $qq="Hello";
             echo "No suggestion";
         else
         {
-            $query="INSERT INTO shop VALUES(null,'$start','$qq','$hint')";
+            $query="INSERT INTO shop VALUES(null,'$start','$q','$hint')";
             if($bd->query($query))
             {
                 echo $hint;

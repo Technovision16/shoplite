@@ -195,6 +195,7 @@ body {
 	}
 	.product input {
 		width: 160px;
+		outline: 0;
 	}
 	
 	.price {
