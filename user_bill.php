@@ -1,8 +1,10 @@
 <?php
 session_start();
+$_SESSION['start']=1;
+$start=$_SESSION['start'];
 include 'database.php';
 $bd = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-$query="SELECT * FROM register";
+$query="SELECT * FROM shop where idd='$start'";
 $result=$bd->query($query);
 
 
@@ -13,7 +15,7 @@ $result=$bd->query($query);
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Z'16 | Get Zeal</title>
+    <title>User Account</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
@@ -37,21 +39,39 @@ $result=$bd->query($query);
         <a href="">ShopLite <strong>/ INVOICE</strong> </a>
     </div>
     <div class="container">
-        <?php
+        
+        <div class="card" id="card1">  <!-- Requires ID -->
+            <h3>Customer Id -<strong>ANK8447JA08</strong></h3>
+            <p><strong>Customer Name-&nbsp;</strong>Ankit Jain</p>
+            <p><strong>Phone No-&nbsp;</strong>8447269408</p>
+           
+            <div id="total" style="border-top :2px solid darkgreen; ">
+                <table cellspacing="10">
+                    <tr><th>Product Id</th>
+                        <th>Price</th>
+                    </tr>
+                     <?php
         $count=$result->num_rows;
         while($count!=0)
         {
         $row=$result->fetch_assoc();
     
         ?>
-        <div class="card" id="card1">  <!-- Requires ID -->
-            <h3>Customer Id -<strong><?php echo $row["customer_id"]; ?></strong></h3>
-            <p><strong>Customer Name-&nbsp;</strong><?php echo $row["name"]; ?></p>
-            <p><strong>Phone No-&nbsp;</strong><?php echo $row["mob"]; ?></p>
-            <div id="total" style="border-top :2px solid darkgreen; ">
+                    
+                    <tr>
+                        <th><?php echo $row['p_code']; ?></th>
+                        <th><?php echo $row['price']; ?></th>
+                    </tr>
+                    <?php
+$count=$count-1;
+}
+?>
+
+
+                </table>    
                 <?php
-                $id=$row['id'];
-                $query="SELECT SUM(price) FROM shop WHERE idd='$id'";
+                
+                $query="SELECT SUM(price) FROM shop WHERE idd='$start'";
                 $res=$bd->query($query);
                 $ro=$res->fetch_assoc();
                 //var_dump($ro);
@@ -68,10 +88,7 @@ $result=$bd->query($query);
             <input type="submit" id="submit_btn" value="Done Shopping" name="submit" onclick="send_count();showModal();">
         </form>
 
-<?php
-$count=$count-1;
-}
-?>
+
     </div>
 </body>
 </html>
